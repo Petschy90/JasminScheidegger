@@ -1,6 +1,24 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from "nuxt3";
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-
-})
+    build: {
+        postcss: {
+            postcssOptions: {
+                plugins: {
+                    tailwindcss: {},
+                    autoprefixer: {},
+                },
+            },
+        },
+    },
+    head: {
+        css: ["~/assets/css/tailwind.css"],
+    }
+    vue: {
+        config: {
+            productionTip: false,
+            devtools: true,
+        },
+    },
+});
