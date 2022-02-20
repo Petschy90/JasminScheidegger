@@ -1,11 +1,9 @@
 import { defineStore } from "pinia";
+import axios from 'axios';
 
 export const useProjectsStore = defineStore("projects", {
     state: () => ({
-        _projects: [
-            { id: 1, attributes: { name: "Bild1" }},
-            { id: 2, attributes: { name: "Bild2" }}
-        ],
+        _projects: [],
     }),
     getters: {
         projects(state) {
@@ -17,10 +15,9 @@ export const useProjectsStore = defineStore("projects", {
     },
     actions: {
         get() {
-            // this._projects = [
-            //     { id: 1, attributes: { name: "Bild1" } },
-            //     { id: 2, attributes: { name: "Bild2" } },
-            // ];
+            axios.get('http://localhost:1337/api/projects?populate=images').then(response => {
+                this._projects = response.data
+            });
         },
     },
 });
