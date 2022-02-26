@@ -16,11 +16,10 @@ export default defineComponent({
   name: "about",
   setup() {
     const aboutStore = useAboutStore();
-
     aboutStore.get();
 
-    const text = aboutStore.text;
-    const image = aboutStore.image;
+    const text = computed (() => aboutStore.text);
+    const image = computed (() => aboutStore.image);
 
     return { text, image };
   },
