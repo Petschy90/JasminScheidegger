@@ -14,9 +14,4 @@
 // Importing Tailwindcss for this layout
 import '@/assets/css/tailwind.css'
 
-import { useProjectsStore } from "@/store/projects.js";
-
-const projectsStore = useProjectsStore();
-projectsStore.get();
-
 </script>
