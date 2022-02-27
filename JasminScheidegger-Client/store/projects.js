@@ -11,10 +11,10 @@ export const useProjectsStore = defineStore("projects", {
             return state._projects;
         },
         projectsByCategoryId(state) {
-            return (categoryId) => state._projects.filter((item) => item.attributes.category.data.id == categoryId);
+            return (categoryId) => state._projects.filter((item) => item.attributes.category.data.id === categoryId);
         },
         project(state) {
-            return (id) => state._projects.find((item) => item.id === id);
+            return (slug) => state._projects.find((item) => item.attributes.slug === slug);
         },
     },
     actions: {
