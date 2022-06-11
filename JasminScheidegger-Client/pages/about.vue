@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="flex space-x-4 items-center">
-      <div class="w-80"> 
+    <div class="md:flex space-y-4 md:space-y-0 md:space-x-4 md:items-center">
+      <div class="md:w-80"> 
         <img v-if="image" :src="'http://localhost:1337' + image.attributes.url" />
       </div>
       <div class="font-brand-main whitespace-pre-line" v-html="text"></div>

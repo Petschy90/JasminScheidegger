@@ -1,7 +1,5 @@
 <template>
-    <div class="grid grid-cols-4 gap-1">
-        <ProjectPreviewList :projects="projects" />
-    </div>
+    <ProjectPreviewList :projects="projects" />
 </template>
 
 <script>

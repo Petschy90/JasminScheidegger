@@ -1,6 +1,6 @@
 <template>
-    <div v-for="project in props.projects" :key="project.id" >
-        <ProjectPreview :project="project" />
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+        <ProjectPreview v-for="project in props.projects" :key="project.id" :project="project" />
     </div>
 </template>
 

@@ -1,9 +1,7 @@
 <template>
   <div>
     <h1>Illustration</h1>
-    <div class="grid grid-cols-4 gap-1">
-        <ProjectPreviewList :projects="projects" />
-    </div>
+    <ProjectPreviewList :projects="projects" />
   </div>
 </template>
 
