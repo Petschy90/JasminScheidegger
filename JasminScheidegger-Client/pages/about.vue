@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h1>About</h1>
-    <p>{{text}}</p>
-    <div v-if="image"> 
-      <img :src="'http://localhost:1337' + image.attributes.url" />
+    <div class="flex space-x-4 items-center">
+      <div class="w-80"> 
+        <img v-if="image" :src="'http://localhost:1337' + image.attributes.url" />
+      </div>
+      <div class="font-brand-main whitespace-pre-line" v-html="text"></div>
     </div>
   </div>
 </template>

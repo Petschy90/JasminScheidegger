@@ -9,7 +9,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily:{
-                'interstate': ['interstate','sans-serif']
+                'brand-heading': ['forma-djr-banner', 'sans-serif'],
+                'brand-main' : ['minion-pro', 'serif']
             }
         },
     },
